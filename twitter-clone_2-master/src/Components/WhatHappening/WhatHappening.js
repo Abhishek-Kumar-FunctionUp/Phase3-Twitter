@@ -8,7 +8,7 @@ import CustomButton from "../../Atom/Button/CustomButton";
 import {tweetPosts} from "../../ConstData/ConstData";
 
 import { useRecoilState } from "recoil";
-import { isTweetPost, userProfile } from "../../Recoil/Atom1/Atom";
+import { isTweetPost, myTweets, userProfile } from "../../Recoil/Atom1/Atom";
 
 function WhatHappening() {
  
@@ -16,6 +16,7 @@ function WhatHappening() {
   const[storeArray,setStoreArray]=useState("")
   const [image,setImage]=useState("")
   const [loginStatus,setLoginStatus] = useRecoilState(isTweetPost);
+  const [personalTweets, setPersonalTweets]= useRecoilState(myTweets)
   const inputRef=useRef(null)
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
@@ -63,6 +64,7 @@ function WhatHappening() {
 
     }
    
+    setPersonalTweets([newObj,...personalTweets])
     tweetPosts.unshift(newObj);
     setLoginStatus(loginStatus+1);
     setImage(" ")

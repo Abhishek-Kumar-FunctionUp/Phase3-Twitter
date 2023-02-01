@@ -9,11 +9,13 @@ import ConstData from "../../ConstData/ConstData"
 import {tweetPosts} from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
 import { isTweetPost } from "../../Recoil/Atom1/Atom";
+import {myTweets} from "../../Recoil/Atom1/Atom"
 
 function Tweet() {
   let Data = JSON.parse(localStorage.getItem("user0"));
   const [isOpen, setIsOpen] = useState(false);
   const [loginStatus,setLoginStatus] = useRecoilState(isTweetPost);
+  const [personalTweets, setPersonalTweets] = useRecoilState(myTweets)
   const[forTrue,setForTrue]=useState(0)
   const[storeArray,setStoreArray]=useState("")
   const [image,setImage]=useState("")
@@ -67,7 +69,7 @@ function Tweet() {
       joinedDate : '22 dec 2022'
 
     }
-   
+   setPersonalTweets([newObj,...personalTweets])
     tweetPosts.unshift(newObj);
    
     setForTrue(forTrue+1)
