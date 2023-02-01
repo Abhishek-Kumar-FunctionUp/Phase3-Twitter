@@ -15,5 +15,5 @@ export const isTweetPost = atom({
 
 export const userProfile = atom({
   key: "userProfile",
-  default: {},
+  default: [],
 });

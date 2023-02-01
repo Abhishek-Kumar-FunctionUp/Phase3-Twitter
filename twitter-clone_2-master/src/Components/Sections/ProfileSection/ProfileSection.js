@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./ProfileSection.module.css";
-// import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import WestIcon from "@mui/icons-material/West";
 import CustomButton from "../../../Atom/Button/CustomButton";
 import { useNavigate } from "react-router-dom";
