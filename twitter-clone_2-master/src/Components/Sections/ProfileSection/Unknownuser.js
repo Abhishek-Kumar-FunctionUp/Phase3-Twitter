@@ -7,7 +7,7 @@ import { userProfile } from "../../../Recoil/Atom1/Atom";
 import { useRecoilValue } from "recoil";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { AiFillHeart } from "react-icons/ai";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -18,15 +18,12 @@ function ProfileSection() {
   const nevigate = useNavigate();
   const unknownProfileData = useRecoilValue(userProfile);
   const [likesCount, setLikesCount] = useState(0);
+  const [colour, setColour] = useState(false);
 
   function tweetsUnknown() {}
   function handleLike() {
     setLikesCount(likesCount ? likesCount - 1 : likesCount + 1);
-  }
-  function xyz(dataName) {
-    console.log(dataName);
-    // setNewProfile(dataName)
-    nevigate("/Profile");
+    setColour(!colour);
   }
 
   return (
@@ -83,9 +80,10 @@ function ProfileSection() {
             <p>
               {unknownProfileData.handlerName}
             </p>
-            <h4>
+            <br/>
+            <p>
               {unknownProfileData.tweetText}
-            </h4>
+            </p>
           </div>
         </div>
 
@@ -108,11 +106,12 @@ function ProfileSection() {
           <span>
             {unknownProfileData.likesCount}
             {likesCount}
-            <FavoriteBorderIcon
+            <AiFillHeart
               onClick={handleLike}
-              // {
-              //   ...likesCount ? (setLikesCount(likesCount+1)) : (setLikesCount(likesCount-1))
-              // }
+              style={
+                colour ? { color: "red" } : { color: "rgb(102, 102, 192)" }
+              }
+              className={style.like}
             />
           </span>
           <span>

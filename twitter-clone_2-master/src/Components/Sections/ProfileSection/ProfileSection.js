@@ -9,7 +9,7 @@ import { myTweets } from "../../../Recoil/Atom1/Atom";
 import { useRecoilValue } from "recoil";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { AiFillHeart} from 'react-icons/ai';
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
@@ -26,17 +26,17 @@ function ProfileSection() {
   let Data = JSON.parse(localStorage.getItem("user0"));
   const nevigate = useNavigate();
   const [likesCount, setLikesCount] = useState(0);
+  const [colour, setColour]= useState(false)
 
   function  fetchData()
   {
     // setPost(tweetPosts)
   }
  
- 
   function handleLike() {
     setLikesCount(likesCount ? likesCount-1 : likesCount+1 );
-    
-  }
+    setColour(!colour)
+    }
  
   function handleUserProfile() {
     //setNewProfile()
@@ -114,7 +114,8 @@ function ProfileSection() {
                   
                 </span>
                 <p>{data.handlerName}</p>
-                <h4>{data.tweetText}</h4>
+                <br/>
+                <p>{data.tweetText}</p>
               </div>
             </div>
 
@@ -136,11 +137,11 @@ function ProfileSection() {
                   </span>
                   <span>
                     {data.likesCount}{likesCount}
-                    <FavoriteBorderIcon  onClick={handleLike} 
-                      // {
-                      //   ...likesCount ? (setLikesCount(likesCount+1)) : (setLikesCount(likesCount-1))
-                      // }
+                    <AiFillHeart  onClick={handleLike} 
+                       style={colour ? {color: 'red'} : {color: 'rgb(102, 102, 192)' }} 
+                       className={style.like}
                     />
+                    
                   </span>
                   <span>
                     {data.viewsCount}

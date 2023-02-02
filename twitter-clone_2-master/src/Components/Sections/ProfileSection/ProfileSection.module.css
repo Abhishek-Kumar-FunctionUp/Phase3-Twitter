@@ -95,6 +95,9 @@ margin-top: 3vh;
   justify-content: space-around;
   color: rgb(102, 102, 192);
 }
+.like{
+  font-size: 1.5rem;
+}
 .img1{
 padding-left: 4rem;
 
