@@ -113,12 +113,12 @@ function ProfileSection() {
                   <h3>{data.name}<VerifiedIcon style={{color:"blue"}}/></h3>
                   
                 </span>
-                <h4>{data.handlerName}</h4>
+                <p>{data.handlerName}</p>
                 <h4>{data.tweetText}</h4>
               </div>
             </div>
 
-            <div className={style.img}>
+            <div className={style.img1}>
               <img
                 style={{ width: "30rem", height: "30rem",borderRadius:"15px" }}
                 alt="Picture"
@@ -152,9 +152,9 @@ function ProfileSection() {
           </div>
         );
       })}
-
+{/* 
     <RightContainer2
-    />
+    /> */}
     </>
   );
 }
