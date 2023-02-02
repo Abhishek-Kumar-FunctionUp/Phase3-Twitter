@@ -3,7 +3,6 @@ import style from "./ProfileSection.module.css";
 import WestIcon from "@mui/icons-material/West";
 import CustomButton from "../../../Atom/Button/CustomButton";
 import { useNavigate } from "react-router-dom";
-import RightContainer2 from "../../rightContainer/RightContainer2/RightContainer2"
 import { GoLocation } from "react-icons/go";
 import { FaBirthdayCake } from "react-icons/fa";
 import { myTweets } from "../../../Recoil/Atom1/Atom";
@@ -15,8 +14,7 @@ import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import { Avatar } from "@mui/material";
-// import { tweetPosts } from "../../ConstData/ConstData";
-//import { isTweetPost ,userProfile} from "../../Recoil/Atom1/Atom";
+import RightContainer2 from "../../rightContainer/RightContainer2/RightContainer2";
 
 
 
@@ -26,12 +24,9 @@ function ProfileSection() {
    const PersonalTweets=useRecoilValue(myTweets)
     console.log(PersonalTweets,"Profile Section")
   let Data = JSON.parse(localStorage.getItem("user0"));
-  // const[post,setPost]=useState(tweetPosts)
   const nevigate = useNavigate();
   const [likesCount, setLikesCount] = useState(0);
-  //const[lpost,setLpost]=useState(tweetPosts.length)
-  // const[newPost,setNewPost] = useRecoilState(isTweetPost);
-  // const[newProfile,setNewProfile] = useRecoilState(userProfiles);
+
   function  fetchData()
   {
     // setPost(tweetPosts)
@@ -141,7 +136,7 @@ function ProfileSection() {
                   </span>
                   <span>
                     {data.likesCount}{likesCount}
-                    <FavoriteBorderIcon  onClick={handleLike}
+                    <FavoriteBorderIcon  onClick={handleLike} 
                       // {
                       //   ...likesCount ? (setLikesCount(likesCount+1)) : (setLikesCount(likesCount-1))
                       // }
@@ -157,9 +152,8 @@ function ProfileSection() {
           </div>
         );
       })}
-{/* 
-    <RightContainer2
-    /> */}
+       
+      <RightContainer2 />
     </>
   );
 }

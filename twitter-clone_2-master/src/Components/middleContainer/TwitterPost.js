@@ -84,7 +84,8 @@ function  fetchData()
                   
                 </span>
                 <h4>{data.handlerName}</h4>
-                <h4>{data.tweetText}</h4>
+                <br/>
+                <p>{data.tweetText}</p>
               </div>
             </div>
 
