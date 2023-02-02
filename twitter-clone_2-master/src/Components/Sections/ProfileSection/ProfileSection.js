@@ -81,7 +81,13 @@ function ProfileSection() {
         </div>
       </div>
     </div>
-    <hr style={{border:'2px solid black'}} />
+    {/* <hr style={{border:'2px solid black'}} /> */}
+    <div className={style.replies}>
+      <h4>Tweet</h4>
+      <h4>Tweet & replies</h4>
+      <h4>Media</h4>
+      <h4>Likes</h4>
+    </div>
     {PersonalTweets.map((data) => {
         return (
           <div className={style.wrapper}>
