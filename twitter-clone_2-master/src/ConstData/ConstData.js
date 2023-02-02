@@ -12,7 +12,7 @@ export const tweetPosts = [
         likesCount : 100,
         followers : 200,
         followings : 400,
-        joinedDate : '22 dec 2022',
+        joinedDate : "22 Dec 2022",
         tweets : [
             {
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',

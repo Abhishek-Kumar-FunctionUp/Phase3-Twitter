@@ -7,7 +7,7 @@ import RightContainer2 from "../../rightContainer/RightContainer2/RightContainer
 import { GoLocation } from "react-icons/go";
 import { FaBirthdayCake } from "react-icons/fa";
 import { myTweets } from "../../../Recoil/Atom1/Atom";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -72,8 +72,8 @@ function ProfileSection() {
       </div>
 
       <div className={style.textcontaint}>
-        <h4>{`${"Name:-"}${Data.Name}`}</h4>
-        <h5>{`${"@"}${Data.Name}`}</h5>
+        <h4>{Data.Name}</h4>
+        <p>{`${"@"}${Data.Name}`}</p>
         <p><GoLocation />India <span><FaBirthdayCake />{Data.Date} {Data.Month} {Data.Year}</span></p>
       <div className={style.follow}>
         <h5>Followers :- 2000</h5>
@@ -81,7 +81,6 @@ function ProfileSection() {
         </div>
       </div>
     </div>
-    {/* <hr style={{border:'2px solid black'}} /> */}
     <div className={style.replies}>
       <h4>Tweet</h4>
       <h4>Tweet & replies</h4>

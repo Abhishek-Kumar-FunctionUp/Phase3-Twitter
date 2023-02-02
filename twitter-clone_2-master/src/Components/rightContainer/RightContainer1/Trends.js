@@ -19,41 +19,6 @@ const Trends = () => {
         setIsNotIntrested(trendingData)
     }
     
-  //     id: 1,
-  //     isNotIntrested: false,
-  //     country: "Trending in India",
-  //     keyword: "#Sachin tendulkar",
-  //     totalKeywords: "8000k Tweets",
-  //   },
-  //   {
-  //     id: 2,
-  //     isNotIntrested: false,
-  //     country: "Trending in India",
-  //     keyword: "#Lionel Messi",
-  //     totalKeywords: "6000k Tweets",
-  //   },
-  //   {
-  //     id: 3,
-  //     isNotIntrested: false,
-  //     country: "Trending in Sports",
-  //     keyword: "#Neymar",
-  //     totalKeywords: "2560k Tweets",
-  //   },
-  //   {
-  //     id: 4,
-  //     isNotIntrested: true,
-  //     country: "Trending in Sports",
-  //     keyword: "#Cristiano Ronaldo",
-  //     totalKeywords: "2000k Tweets",
-  //   },
-  //   {
-  //     id: 5,
-  //     isNotIntrested: false,
-  //     country: "Trending in Sports",
-  //     keyword: "#MS Dhoni",
-  //     totalKeywords: "2000k Tweets",
-  //   },
-  // ]);
   
   const [selectedId, setSelectedId] = useState(null);
   const updateId = (id) => setSelectedId(id);

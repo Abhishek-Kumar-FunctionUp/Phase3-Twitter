@@ -45,7 +45,6 @@ function  fetchData()
   }
   
  function xyz (dataName)  {
-    console.log(dataName);
     setNewProfile(dataName)
     nevigate("/Profile2")
     };
