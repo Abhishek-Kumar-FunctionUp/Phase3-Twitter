@@ -5,19 +5,18 @@ import { FiCamera } from "react-icons/fi";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
-import ConstData from "../../ConstData/ConstData"
-import {tweetPosts} from "../../ConstData/ConstData";
+import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
 import { isTweetPost } from "../../Recoil/Atom1/Atom";
-import {myTweets} from "../../Recoil/Atom1/Atom"
+import { myTweets } from "../../Recoil/Atom1/Atom"
 
 function Tweet() {
   let Data = JSON.parse(localStorage.getItem("user0"));
   const [isOpen, setIsOpen] = useState(false);
   const [loginStatus,setLoginStatus] = useRecoilState(isTweetPost);
   const [personalTweets, setPersonalTweets] = useRecoilState(myTweets)
-  const[forTrue,setForTrue]=useState(0)
-  const[storeArray,setStoreArray]=useState("")
+  const [forTrue,setForTrue]=useState(0)
+  const [storeArray,setStoreArray]=useState("")
   const [image,setImage]=useState("")
   const inputRef=useRef(null)
   const Icons = [
@@ -58,8 +57,6 @@ function Tweet() {
       organization : 'United States government organization',
       tweetText : storeArray,
       tweetPic: image,
-     
-    
       tweetCount : 0,
       retweetCount : 0 ,
       likesCount : 0,
@@ -69,9 +66,8 @@ function Tweet() {
       joinedDate : '22 dec 2022'
 
     }
-   setPersonalTweets([newObj,...personalTweets])
+    setPersonalTweets([newObj,...personalTweets])
     tweetPosts.unshift(newObj);
-   
     setForTrue(forTrue+1)
     setLoginStatus(loginStatus+1);
     setImage(" ")
@@ -100,8 +96,8 @@ function Tweet() {
             <div className={style.imageWrapper}>
             <img
             src={image}
-            height='50%'
-            width='50%'
+            height='30%'
+            width='30%'
 
             />
             </div>

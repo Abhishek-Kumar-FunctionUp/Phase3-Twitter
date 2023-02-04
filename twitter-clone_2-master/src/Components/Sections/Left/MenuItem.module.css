@@ -27,8 +27,8 @@
     gap:0.89rem;
     padding: 0.2rem 0.5rem;
     width: max-content;
-   display:inline-flex;
-   text-align: center ;
+    display:inline-flex;
+    text-align: center ;
     font-family: "TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif";
   }
 
@@ -89,19 +89,19 @@
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     margin-bottom: 1rem;
+    font-style: bold;
   }
   
   .fatwitter {
     color: var(--twitter-color);
     font-size: 30px;
   }
-.Dialog{
+ .Dialog{
   backdrop-filter: blur(5px);
-}
+  }
 
 
-.logo
-{
+  .logo{
   font-weight: 800;
   font-size: 1.641rem;
   color: #50b7f5 ;

@@ -1,7 +1,5 @@
 import React from "react";
-
 import style from "./TwitterPost.module.css";
-
 import { Avatar } from "@mui/material";
 import { tweetPosts } from "../../ConstData/ConstData";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -12,7 +10,7 @@ import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import { useState,useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { isTweetPost ,userProfile} from "../../Recoil/Atom1/Atom";
+import { isTweetPost ,userProfile } from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
 
 

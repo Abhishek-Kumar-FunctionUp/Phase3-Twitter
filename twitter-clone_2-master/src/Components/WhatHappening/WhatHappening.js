@@ -96,8 +96,8 @@ function WhatHappening() {
              <div className={style.imageWrapper}>
                <img
                   src={image}
-                  height='50%'
-                  width='50%'
+                  height='30%'
+                  width='30%'
                   alt="img"
 
             />
